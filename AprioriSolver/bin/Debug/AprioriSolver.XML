@@ -1,0 +1,199 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AprioriSolver</name>
+    </assembly>
+    <members>
+        <member name="M:AprioriSolver.GenerateInputForm.#ctor">
+            <summary>Default constructor.</summary>
+        </member>
+        <member name="M:AprioriSolver.GenerateInputForm.generateButton_Click(System.Object,System.EventArgs)">
+            <summary>Retrieves all necessary data needed to generate transactions.</summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:AprioriSolver.GenerateInputForm.getTransactionsNumber">
+            <summary>Gets value of transactionsNumber.</summary>
+            <returns>Value of transactionsNumber.</returns>
+        </member>
+        <member name="M:AprioriSolver.GenerateInputForm.getItemsNumber">
+            <summary>Gets value of itemsNumber.</summary>
+            <returns>Value of itemsNumber.</returns>
+        </member>
+        <member name="M:AprioriSolver.GenerateInputForm.getItemsInTransNumber">
+            <summary>Gets value of itemsInTransNumber.</summary>
+            <returns>Value of itemsInTransNumber.</returns>
+        </member>
+        <member name="F:AprioriSolver.GenerateInputForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:AprioriSolver.GenerateInputForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:AprioriSolver.GenerateInputForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:AprioriSolver.MainForm.#ctor">
+            <summary>Default constructor.</summary>
+        </member>
+        <member name="M:AprioriSolver.MainForm.threadStart(System.String)">
+            <summary>Stops the background thread.</summary>
+            <param name="info">Text to be displayed above progress bar.</param>
+        </member>
+        <member name="M:AprioriSolver.MainForm.threadStop(System.Boolean)">
+            <summary>Stops the background thread.</summary>
+            <param name="countTime">Indicates whether count time of thread life.</param>
+        </member>
+        <member name="M:AprioriSolver.MainForm.StopProgressBar(System.Windows.Forms.ProgressBar)">
+            <summary>Stops progress bar.</summary>
+            <param name="myProgressBar">Progress bar to be stopped.</param>
+        </member>
+        <member name="M:AprioriSolver.MainForm.setInSetOfSets(System.Collections.Generic.List{System.Int32},System.Collections.Generic.List{System.Collections.Generic.List{System.Int32}})">
+            <summary>Counts how many target sets contains searched set.</summary>
+            <param name="searched">Searched set.</param>
+            <param name="target">List of target sets.</param>
+            <returns>Number of containments of searched set in target sets.</returns>
+        </member>
+        <member name="M:AprioriSolver.MainForm.joinSets(System.Collections.Generic.List{System.Int32},System.Collections.Generic.List{System.Int32})">
+            <summary>Creates union of two sets.</summary>
+            <param name="set1">One set to be joined.</param>
+            <param name="set2">Another set to be joined.</param>
+            <returns>Union of parameter sets.</returns>
+        </member>
+        <member name="M:AprioriSolver.MainForm.createCandidates(System.Collections.Generic.List{System.Collections.Generic.List{System.Int32}},System.Int32)">
+            <summary>Creates candidate sets for frequent sets.</summary>
+            <param name="L">List of frequent set for candidate sets creating.</param>
+            <param name="length">Size of candidate sets to be created.</param>
+            <returns>Candidate sets.</returns>
+        </member>
+        <member name="M:AprioriSolver.MainForm.findFrequent">
+            <summary>Initializes finding frequent sets and prints result in ListBox.</summary>
+        </member>
+        <member name="M:AprioriSolver.MainForm.findFrequent(System.Collections.Generic.List{System.Collections.Generic.List{System.Int32}},System.Int32)">
+            <summary>Finds frequent sets in candidate sets and moves them to frequent list.</summary>
+            <param name="candidates">Candidate sets.</param>
+            <param name="length">Size of frequent sets to be found.</param>
+        </member>
+        <member name="M:AprioriSolver.MainForm.generateTransactions">
+            <summary>Initializes generating transactions.</summary>
+        </member>
+        <member name="M:AprioriSolver.MainForm.generateTransactions(System.Int32,System.Int32,System.Int32)">
+            <summary>Generate transactions.</summary>
+            <param name="transactionsN">Number of transactions to be generated.</param>
+            <param name="itemsN">Maximal number of items.</param>
+            <param name="itemsInTransN">Maximal numbes of items on one transaction.</param>
+        </member>
+        <member name="M:AprioriSolver.MainForm.generateTransactionsToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>Calls GenesateInputForm for retreiving user input needed to generate transactions.</summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:AprioriSolver.MainForm.importXmlFileWithTransactions">
+            <summary>Imports XML file with transactions.</summary>
+        </member>
+        <member name="M:AprioriSolver.MainForm.importTransactionsToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>Calls OpenFileDialog for importing XML file.</summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:AprioriSolver.MainForm.generateOutputToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>Generates frequent sets using findFrequent method.</summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:AprioriSolver.MainForm.createXmlFileWithFrequentSets">
+            <summary>Creates XMl file with frequent sets.</summary>
+        </member>
+        <member name="M:AprioriSolver.MainForm.saveXmlFileWithFrequentSets">
+            <summary>Saves XMl file.</summary>
+        </member>
+        <member name="M:AprioriSolver.MainForm.exportOutputToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>Calls SaveFileDialog for saving XML file.</summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:AprioriSolver.MainForm.setSupport">
+            <summary>Calls SetSupportForm for retreiving user input needed to set support.</summary>
+        </member>
+        <member name="M:AprioriSolver.MainForm.setSupportToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>Calls setSupport method.</summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:AprioriSolver.MainForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:AprioriSolver.MainForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:AprioriSolver.MainForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:AprioriSolver.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="M:AprioriSolver.SetSupportForm.#ctor">
+            <summary>Default constructor.</summary>
+        </member>
+        <member name="M:AprioriSolver.SetSupportForm.setButton_Click(System.Object,System.EventArgs)">
+            <summary>Sets value of supportPercentage.</summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:AprioriSolver.SetSupportForm.getSupportPercentage">
+            <summary>Gets value of supportPercentage.</summary>
+            <returns>Value of supportPercentage.</returns>
+        </member>
+        <member name="F:AprioriSolver.SetSupportForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:AprioriSolver.SetSupportForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:AprioriSolver.SetSupportForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:AprioriSolver.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:AprioriSolver.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:AprioriSolver.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>
